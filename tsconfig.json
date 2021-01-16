@@ -9,5 +9,6 @@
     "sourceMap": true,
     "outDir": "dist",
     "baseUrl": "src",
-  }
+  },
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
