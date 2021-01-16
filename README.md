@@ -10,18 +10,28 @@
 
 > Tiny Chain is a tiny blockchain, based on NodeJS and TypeScript that will feature pluggable consensus mechanisms including but not limited to novel Proof Of Arrival(PoAl) and Proof Of Activity(PoAy).
 
-## Install
+## Scope
+
+Tiny Chain is a layer-1 blockchain that will be a completely programmable public blockchain with the ability to bring in custom pluggable consensus mechanism in addition to the default ones.
+
+Ease of programming smart contracts using TypeScript will be the focus on the programmable aspect of the blockchain.
+
+Additionally, data from oracles can be onloaded via ChainLink while data from the chain can be exposed via Graph APIs and gRPC.
+
+**Chain Connectors** are plugins that will define interfaces/facades that will allow Tiny Chain to communicate with other blockchains including Bitcoin, Ethereum, NEO and Comsos.
+
+## Installation
 
 ```sh
 yarn install
 ```
 
-## Run tests
+## Run Tests
 
 ```sh
 yarn run test
 ```
 
-## Show your support
+## Show Your Support
 
 Give a ⭐️ if this project helped you!
