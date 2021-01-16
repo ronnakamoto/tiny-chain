@@ -1,9 +1,17 @@
 import IBlock from "./IBlock";
 
 export default class Block {
-  public block: IBlock;
+  time: number;
+  version: number;
+  hashPrevBlock: string;
+  hashMerkleRoot: string;
+  data: any;
 
   constructor(block: IBlock) {
-    this.block = block;
+    this.version = block.version;
+    this.time = block.time;
+    this.hashPrevBlock = block.hashPrevBlock;
+    this.hashMerkleRoot = block.hashMerkleRoot;
+    this.data = block.data;
   }
 }
