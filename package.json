@@ -8,6 +8,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^26.0.20",
+    "coveralls": "^3.1.0",
     "jest": "^26.6.3",
     "ts-jest": "^26.4.4",
     "ts-node": "^9.1.1",
@@ -15,7 +16,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
   },
   "dependencies": {
     "keccak256": "^1.0.2"
