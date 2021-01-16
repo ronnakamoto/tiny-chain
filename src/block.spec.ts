@@ -49,5 +49,24 @@ describe("Block", () => {
     it("should create a block whose `hashPrevBlock` is same as `hash` of the previous block", () => {
       expect(minedBlock.hashPrevBlock).toEqual(prevBlock.hashMerkleRoot);
     });
+
+    it("should invoke `generateHash` to generate the keccak", () => {
+      const expectedInput: string = JSON.stringify({
+        hashPrevBlock: expect.any(String),
+        time: expect.any(Number),
+        data: expect.any(String),
+      });
+
+      const generateHash = jest.fn();
+      
+      jest.spyOn(Block, "mineBlock").mockImplementation(() => {
+        generateHash(expectedInput);
+        return new Block(expect.any(Block));
+      });
+
+      Block.mineBlock(prevBlock, data);
+
+      expect(generateHash).toHaveBeenCalledWith(expectedInput);
+    })
   })
 });
