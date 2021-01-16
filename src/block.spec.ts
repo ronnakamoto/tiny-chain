@@ -36,4 +36,18 @@ describe("Block", () => {
       expect(genesisBlock).toMatchObject(GENESIS_BLOCK);
     });
   });
+
+  describe("mineBlock()", () => {
+    const prevBlock = Block.genesisBlock();
+    const data = "SAMPLE_DATA";
+    const minedBlock = Block.mineBlock(prevBlock, data);
+
+    it("should return an instance of Block", () => {
+      expect(minedBlock).toBeInstanceOf(Block);
+    });
+
+    it("should create a block whose `hashPrevBlock` is same as `hash` of the previous block", () => {
+      expect(minedBlock.hashPrevBlock).toEqual(prevBlock.hashMerkleRoot);
+    });
+  })
 });

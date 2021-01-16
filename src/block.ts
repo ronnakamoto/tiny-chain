@@ -17,6 +17,17 @@ export default class Block {
   }
 
   static genesisBlock(): Block {
-    return new Block(GENESIS_BLOCK); 
+    return new this(GENESIS_BLOCK); 
+  }
+
+  static mineBlock(prevBlock: IBlock, data: any): Block {
+    const block: IBlock = {
+      version: prevBlock.version,
+      time: +new Date(),
+      hashPrevBlock: prevBlock.hashMerkleRoot,
+      hashMerkleRoot: "PLACEHOLDER_HASH",
+      data,
+    }
+    return new this(block);
   }
 }
