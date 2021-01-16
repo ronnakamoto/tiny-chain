@@ -4,6 +4,7 @@
   <a href="#" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
+  <img alt="Travis (.com)" src="https://img.shields.io/travis/com/ubuntugod/tiny-chain">
 </p>
 
 > A tiny blockchain based on NodeJS and TypeScript
