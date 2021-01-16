@@ -3,4 +3,5 @@ export default interface IBlock {
   version: number;
   hashPrevBlock: string;
   hashMerkleRoot: string;
+  data: any;
 };
