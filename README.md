@@ -20,6 +20,8 @@ Additionally, data from oracles can be onloaded via ChainLink while data from th
 
 **Chain Connectors** are plugins that will define interfaces/facades that will allow Tiny Chain to communicate with other blockchains including Bitcoin, Ethereum, NEO and Comsos.
 
+**Chain Notifiers** are plugins that will allow dApp developers to send notifications off-chain based on events that occur on-chain.
+
 ## Installation
 
 ```sh
