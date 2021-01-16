@@ -1,5 +1,5 @@
 {
-  "name": "ts-chain",
+  "name": "tiny-chain",
   "version": "1.0.0",
   "description": "A tiny blockchain based on NodeJS and TypeScript",
   "main": "dist/index.js",
