@@ -1,5 +1,6 @@
 import IBlock from "./IBlock";
 import { GENESIS_BLOCK } from "../config";
+import generateHash from "./generateHash";
 
 export default class Block {
   time: number;
@@ -21,11 +22,19 @@ export default class Block {
   }
 
   static mineBlock(prevBlock: IBlock, data: any): Block {
+    const time: number = +new Date();
+    const hashPrevBlock: string = prevBlock.hashMerkleRoot;
+    const hashMerkleRoot: string = generateHash(JSON.stringify({
+      hashPrevBlock,
+      data,
+      time,
+    }));
+    
     const block: IBlock = {
       version: prevBlock.version,
-      time: +new Date(),
-      hashPrevBlock: prevBlock.hashMerkleRoot,
-      hashMerkleRoot: "PLACEHOLDER_HASH",
+      time,
+      hashPrevBlock,
+      hashMerkleRoot,
       data,
     }
     return new this(block);
