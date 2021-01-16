@@ -1,4 +1,5 @@
 import IBlock from "./IBlock";
+import { GENESIS_BLOCK } from "../config";
 
 export default class Block {
   time: number;
@@ -13,5 +14,9 @@ export default class Block {
     this.hashPrevBlock = block.hashPrevBlock;
     this.hashMerkleRoot = block.hashMerkleRoot;
     this.data = block.data;
+  }
+
+  static genesisBlock(): Block {
+    return new Block(GENESIS_BLOCK); 
   }
 }
