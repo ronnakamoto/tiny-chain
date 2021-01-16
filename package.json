@@ -7,11 +7,14 @@
   "author": "Adarsh Ron",
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^26.0.20",
     "jest": "^26.6.3",
+    "ts-jest": "^26.4.4",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest --coverage"
   }
 }
