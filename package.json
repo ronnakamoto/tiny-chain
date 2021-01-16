@@ -16,5 +16,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest --coverage"
+  },
+  "dependencies": {
+    "keccak256": "^1.0.2"
   }
 }
