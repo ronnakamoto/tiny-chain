@@ -14,7 +14,7 @@
 
 Tiny Chain is a layer-1 blockchain that will be a completely programmable public blockchain with the ability to bring in custom pluggable consensus mechanism in addition to the default ones.
 
-Ease of programming smart contracts using TypeScript will be the focus on the programmable aspect of the blockchain.
+Ease of programming smart contracts using TypeScript inspired language(**TinyLang**) will be the focus on the programmable aspect of the blockchain. TinyLang can run on a secured sandboxed Virtual Machine - **Tiny Virtual Machine(TVM)**.
 
 Additionally, data from oracles can be onloaded via ChainLink while data from the chain can be exposed via Graph APIs and gRPC.
 
