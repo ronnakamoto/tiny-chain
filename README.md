@@ -8,7 +8,7 @@
   <a href='https://coveralls.io/github/ubuntugod/tiny-chain?branch=master'><img src='https://coveralls.io/repos/github/ubuntugod/tiny-chain/badge.svg?branch=master' alt='Coverage Status' /></a>
 </p>
 
-> Tiny Chain is a tiny blockchain, based on NodeJS and TypeScript that will feature pluggable consensus mechanisms including but not limited to novel Proof Of Arrival(PoAl) and Proof Of Activity(PoAy).
+> Tiny Chain is a tiny blockchain, based on NodeJS and TypeScript that will feature pluggable consensus mechanisms.
 
 ## Scope
 
