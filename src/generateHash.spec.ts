@@ -11,7 +11,7 @@ describe("generateHash()", () => {
       toString, 
   }));
 
-  const generateHash = jest.fn().mockImplementation((data) => {
+  (generateHash as jest.Mock).mockImplementation((data) => {
     return keccak256(data).toString("hex");
   });
 
